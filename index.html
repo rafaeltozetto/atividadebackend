@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Áreas</title>
+</head>
+<body>
+
+<h1>Calculadora de Áreas</h1>
+
+<form id="formGeometrico">
+  <label for="forma">Escolha a forma geométrica:</label>
+  <select id="forma" onchange="mostrarCampos()">
+    <option value="quadrado">Quadrado</option>
+    <option value="retangulo">Retângulo</option>
+    <option value="circulo">Círculo</option>
+  </select>
+  <br>
+  <div id="camposQuadrado" style="display:none;">
+    <label for="ladoQuadrado">Lado do quadrado:</label>
+    <input type="number" id="ladoQuadrado" name="ladoQuadrado" step="any">
+  </div>
+  <div id="camposRetangulo" style="display:none;">
+    <label for="baseRetangulo">Base do retângulo:</label>
+    <input type="number" id="baseRetangulo" name="baseRetangulo" step="any">
+    <br>
+    <label for="alturaRetangulo">Altura do retângulo:</label>
+    <input type="number" id="alturaRetangulo" name="alturaRetangulo" step="any">
+  </div>
+  <div id="camposCirculo" style="display:none;">
+    <label for="raioCirculo">Raio do círculo:</label>
+    <input type="number" id="raioCirculo" name="raioCirculo" step="any">
+  </div>
+  <br>
+  <button type="button" onclick="calcularArea()">Calcular Área</button>
+</form>
+
+<div id="resultado"></div>
+<link rel="stylesheet" href="">
+<script src="index.js"></script>
+</body>
+</html>
